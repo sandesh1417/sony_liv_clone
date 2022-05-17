@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sony_liv_3/widgets/content_header.dart';
+import 'package:sony_liv_3/widgets/previewss.dart';
+import 'package:sony_liv_3/widgets/previewsss.dart';
 
 import '../widgets/content_list.dart';
 import '../widgets/custom_app_bar.dart';
@@ -62,13 +64,23 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.only(top: 20),
           sliver: SliverToBoxAdapter(child: Previews()),),
 
-          SliverPadding(
-          padding: EdgeInsets.only(top: 20),
-          sliver: SliverToBoxAdapter(child: Previews()),),
+          //SliverPadding(
+         // padding: EdgeInsets.only(top: 5),
+         // sliver: 
+          SliverToBoxAdapter(child: Previewss()),
+          //),
 
-          SliverPadding(
-          padding: EdgeInsets.only(top: 20),
-          sliver: SliverToBoxAdapter(child: Previews()),),
+          //SliverPadding(
+         // padding: EdgeInsets.only(top: 20),
+         // sliver: 
+          SliverToBoxAdapter(child: Previewsss()),
+         
+
+          SliverPadding(padding: EdgeInsets.only(top: 20),
+          sliver:    SliverToBoxAdapter(child: Previewss()), 
+           ),
+       
+          //),
 
 
       //     SliverToBoxAdapter(

@@ -15,11 +15,27 @@ class CustomAppBar extends StatelessWidget {
       child: SafeArea(
         child: Row(
           children: [
-            Container(
-                height: 80,
-                width:80,
-
-                decoration:BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/3.jpg')))),
+            Center(
+              child: Container(
+                padding: const EdgeInsets.all(3),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Colors.red, Colors.green, Colors.purple],
+                  ),
+                  borderRadius: BorderRadius.circular(90),
+                ),
+                child: Container(
+                  height: 36,
+                  width: 36,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(90),
+                    image: const DecorationImage(
+                        image: AssetImage('assets/images/3.jpg'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+              ),
+            ),
             const SizedBox(
               width: 12.0,
             ),
@@ -66,10 +82,8 @@ class _AppBarButton extends StatelessWidget {
       onDoubleTap: onTap,
       child: Text(
         title,
-        style: const TextStyle(color: Colors.white,
-        fontSize: 16.0,
-        fontWeight: FontWeight.w600),
-        
+        style: const TextStyle(
+            color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.w600),
       ),
     );
   }
